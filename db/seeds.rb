@@ -10,11 +10,11 @@
 
 #prepare for roles
 ["admin", "buyer", "common", "pro"].each do |role|    
-  Role.find_or_create_by_name role    
+  Role.find_or_create_by(name: role)    
 end
 
 #prepare for admin user
-admin = User.find_or_initialize_by_email(:email => "shanghaichris@gmail.com")
+admin = User.where(email: "shanghaichris@gmail.com").first_or_initialize
 admin.name="袁文炯"
 admin.password="12345678"
 admin.roles << Role.admin

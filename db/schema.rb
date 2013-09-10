@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20130910124556) do
   end
 
   create_table "roles_users", id: false, force: true do |t|
-    t.integer "role_id"
-    t.integer "user_id"
+    t.integer "role_id",  null: false
+    t.integer "user_id",  null: false
+    t.integer "roles_id"
+    t.integer "users_id"
   end
 
   create_table "users", force: true do |t|

@@ -46,3 +46,8 @@ end
 
 # Use Devise
 gem 'devise'
+
+#bootstrap 3 for rails 3/4
+#gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
+
+gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
